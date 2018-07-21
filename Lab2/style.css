@@ -1,0 +1,44 @@
+/*a:link{*/
+    /*color:hotpink;*/
+/*}*/
+/*div{*/
+    /*border: 3px solid deeppink;*/
+    /*width: 50%;*/
+    /*padding: 10px;*/
+    /*margin: 10px auto;*/
+    /*text-align: left;*/
+/*}*/
+/*body{*/
+    /*text-align: center;*/
+/*}*/
+body{
+    margin: 0 auto;
+}
+#navBar{
+    height: 75px;
+    background-color: royalblue;
+}
+#headerView{
+    height: 400px;
+    background-color: lightskyblue;
+}
+#mainSession{
+    margin: 75px 100px;
+    height: 500px;
+    background-color: gray;
+}
+#viewFooter{
+    height: 100px;
+    background-color: black;
+}
+p{
+    height: 200px;
+    background-color: khaki;
+    margin-bottom: 75px;
+}
+div.col{
+    height: 400px;
+    width: 48%;
+    background-color: tomato;
+    float: left;
+}

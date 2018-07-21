@@ -1,0 +1,58 @@
+body{
+    margin: 0 auto;
+    font-family: Inconsolata;
+    font-size: 18.4px;
+    line-height: 1.6;
+}
+.viewleft{
+    background-image: url("background.png");
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+}
+.viewRight{
+    width: 60%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*float: left;*/
+}
+a.top-nav{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    text-align: left;
+}
+.top-nav a.hover{
+    text-decoration: underline;
+}
+section.contents-left h1{
+    font-size: 3em;
+    font-family: Monospaced;
+    margin: 0;
+    font-weight: bold;
+}
+section.contents-left a{
+    text-align: center;
+    font-family: Inconsolata,monospace;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+section > nav > ul > li{
+    display: inline-block;
+    border-bottom: 3px solid crimson;
+    padding-bottom: 0.2em;
+    font-family: Monospaced;
+}
+section > nav > ul{
+    padding: 1em 5em;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
