@@ -3,6 +3,7 @@ body{
     font-family: Inconsolata;
     font-size: 18.4px;
     line-height: 1.6;
+    box-sizing: border-box;
 }
 .viewleft{
     background-image: url("background.png");
@@ -21,12 +22,16 @@ body{
     right: 0;
     /*float: left;*/
 }
-a.top-nav{
+a.top-nav,a.bottom-nav{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Space Mono', monospace;
     text-align: left;
+    border-bottom: 3px solid crimson;
+    padding-bottom: 0.2em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
 }
 .top-nav a.hover{
     text-decoration: underline;
@@ -37,22 +42,42 @@ section.contents-left h1{
     margin: 0;
     font-weight: bold;
 }
-section.contents-left a{
+.contents-left{
+    flex-grow: 1;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+section.contents-left a{
     font-family: Inconsolata,monospace;
     text-decoration: none;
     color: white;
     display: block;
 }
 section > nav > ul > li{
-    display: inline-block;
-    border-bottom: 3px solid crimson;
-    padding-bottom: 0.2em;
     font-family: Monospaced;
+    display: block;
+    position: relative;
+}
+section > nav > ul > li a{
+    margin: 0px;
 }
 section > nav > ul{
-    padding: 1em 5em;
+    padding: 1em;
     list-style-type: none;
     text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
     margin: 0;
+}
+#blurBackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.75);
+    display: flex;
+    flex-direction: column;
 }
