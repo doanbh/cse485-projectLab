@@ -13,14 +13,18 @@
 /*}*/
 body{
     margin: 0 auto;
+    box-sizing: border-box;
 }
 #navBar{
     height: 75px;
     background-color: royalblue;
 }
 #headerView{
-    height: 400px;
-    background-color: lightskyblue;
+    height: 648px;
+    background-image: url("banner.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 #mainSession{
     margin: 75px 100px;
@@ -41,4 +45,43 @@ div.col{
     width: 48%;
     background-color: tomato;
     float: left;
+}
+
+.collection{
+    /*text-transform: uppercase;*/
+    display: inline-block;
+    padding: 10px;
+}
+.collection a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: "proxima-nova";
+    font-style: normal;
+}
+#navBar{
+    position: absolute;
+    padding: 20px 20px;
+    top: 0px;
+    right: 0px;
+    text-align: right;
+    z-index: 100;
+    background-color: transparent;
+}
+#logoView{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    z-index: 100;
+    padding: 20px 20px;
+}
+#blurBackground{
+    background-color: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
 }

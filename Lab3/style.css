@@ -1,0 +1,19 @@
+h2{
+    color: dodgerblue;
+}
+body{
+    display: flex;
+    background-color: lightskyblue;
+}
+img{
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+#viewLeft{
+    width: 40%;
+    padding: 50px;
+}
+#viewRight{
+    padding: 50px;
+}
