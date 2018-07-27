@@ -25,39 +25,43 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    /*padding-top: 180px;*/
 }
 #mainSession{
-    margin: 75px 100px;
-    height: 500px;
-    background-color: gray;
+    height: 800px;
 }
 #viewFooter{
     height: 100px;
     background-color: black;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
 }
-p{
-    height: 200px;
-    background-color: khaki;
-    margin-bottom: 75px;
-}
+/*p{*/
+    /*height: 200px;*/
+    /*background-color: khaki;*/
+    /*margin-bottom: 75px;*/
+/*}*/
 div.col{
     height: 400px;
-    width: 48%;
-    background-color: tomato;
+    width: 46%;
+    /*background-color: tomato;*/
     float: left;
 }
 
 .collection{
     /*text-transform: uppercase;*/
     display: inline-block;
-    padding: 10px;
+    padding: 10px 20px;
 }
 .collection a{
     text-decoration: none;
     color: white;
-    font-size: 18px;
-    font-family: "proxima-nova";
+    font-size: 13px;
+    font-family: proxima-nova,sans-serif;
+    text-transform: uppercase;
     font-style: normal;
+    line-height: 1em;
 }
 #navBar{
     position: absolute;
@@ -83,5 +87,24 @@ div.col{
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99;
+    padding-top: 180px;
+}
+#last-item-menu{
+    border: 2px solid white;
+    border-radius: 30px;
+}
+#last-item-menu:hover{
+    background-color: white;
+    color: transparent;
+}
+#centerHeader{
+    text-align: center;
+    padding: 32px;
+    z-index: 1010;
+}
+#learn-more{
+    background-color: #36b3a8;
+}
+#mainContent{
+    margin: 100px 15%;
 }

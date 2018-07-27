@@ -28,13 +28,22 @@ a.top-nav,a.bottom-nav{
     text-transform: uppercase;
     font-family: 'Space Mono', monospace;
     text-align: left;
-    border-bottom: 3px solid crimson;
     padding-bottom: 0.2em;
     font-weight: bold;
     letter-spacing: 0.1em;
 }
-.top-nav a.hover{
-    text-decoration: underline;
+a.bottom-nav:hover,a.top-nav:hover,a.top-nav-right:hover{
+    border-bottom: 3px solid crimson;
+}
+a.top-nav-right{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Space Mono";
+    text-align: left;
+    padding-bottom: 0.2em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
 }
 section.contents-left h1{
     font-size: 3em;
@@ -80,4 +89,9 @@ section > nav > ul{
     background-color: rgba(0,0,0,.75);
     display: flex;
     flex-direction: column;
+}
+.contents-right{
+    padding: 60px;
+    text-align: left;
+    font-family: 'Space Mono', monospace;
 }
