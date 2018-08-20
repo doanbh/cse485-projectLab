@@ -1,18 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: hungha
- * Date: 8/17/18
- * Time: 19:02
- */
-//Khai báo sử dụng session
 session_start();
+
+//Khai báo utf-8 để hiển thị được tiếng việt
+header('Content-Type: text/html; charset=UTF-8');
 
 if(isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
 {
     $email=$_POST['txtEmail'];
     $pass=$_POST['txtPassword'];
-    $newPass=md5($pass,PASSWORD_DEFAULT);
+    $newPass=md5($pass);
 
 
     if($email && $pass){
@@ -22,11 +18,15 @@ if(isset($_POST['txtEmail']) && isset($_POST['txtPassword']))
         $result=$conn->query($sql);
         //3. Xu ly ket qua
         if($result->num_rows > 0){
+            //Lưu tên đăng nhập
+            $_SESSION['email'] = $email;
             echo 'Đăng nhập thành công';
-            header('index.php');
+            header('location: index.php');
             exit();
         }else{
+            header('location: login.php?f=1');
             echo 'Tên đăng nhập hoặc mật khẩu không chính xác';
+            exit();
         }
 
         //4. Dong ket noi

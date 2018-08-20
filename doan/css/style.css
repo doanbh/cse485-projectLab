@@ -17,8 +17,20 @@
     margin-top: 60px;
 }
 
+.login-form .canh_bao{
+    padding: 7px 15px;
+    background:#ff6666;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+}
+
 .wrapper{
     margin: 0;
+}
+
+.help-block{
+    color: #ff3333;
 }
 
 .content {
@@ -94,6 +106,12 @@ h1,h2,h3,h4{
     margin-bottom: 20px;
     width: 100%;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.container > #box-list-course{
+    display: block;
+    position: relative;
+    margin-top: 50px;
 }
 
 .box.box-solid {

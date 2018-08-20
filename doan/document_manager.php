@@ -31,7 +31,7 @@
 
             <div class="box box-solid">
                 <div class="box-header with-border">
-            <span class="fa-stack fa-lg pull-left edusecArLangCss">
+            <span class="fa-stack fa-lg pull-left">
                 <i class="fa fa-user fa-2x"></i>
             </span>
 
@@ -41,7 +41,7 @@
                 <strong>Số điện thoại</strong> : 987456987456        </span>
                 </div>
                 <div class="box-body table-responsive">
-                    <a class="btn btn-success pull-right edusecRtlPullLeft" href="/document/file-uploads/create"
+                    <a class="btn btn-success pull-right" href="/document/file-uploads/create"
                        data-target="#globalModal" data-toggle="modal"><i class="fa fa-plus-square"></i> Tải lên File</a>
                     <ul id="w1" class="nav nav-tabs">
                         <li><a href="#upload-me" data-toggle="tab"><i class="fa fa-upload" aria-hidden="true"></i>
@@ -53,7 +53,7 @@
 
                         <form id="tab-upload-file-form" action="/document/file-uploads/downloadzip" method="post">
                             <input type="hidden" name="_csrf"
-                                   value="UEFEanU4UncjcQUtPXRlIQomNS4QcRkUJHMoDgBLNz0dFyMEIH0YFA==">
+                                   value="">
                             <div class="box box-solid" style="border-top: none">
                                 <div class="box-body">
                                     <div id="upload-file-grid" class="grid-view">
@@ -78,9 +78,7 @@
                                                 <td><a href="/document/file-uploads/download?id=3&amp;tab=upload-me"
                                                        title="Download" data-pjax="0"><span
                                                         class="fa fa-download"></span></a></td>
-                                                <td><a href="/document/file-uploads/view?id=3" title="Delete"
-                                                       data-target="#globalModal" data-toggle="modal"
-                                                       data-pjax="0"><span
+                                                <td><a href="/document/file-uploads/view?id=3" title="Delete"><span
                                                         class="fas fa-trash-alt"></span></a></td>
                                             </tr>
                                             </tbody>
@@ -102,54 +100,6 @@
      style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">
-            <script type="text/javascript">$(document).ready(function () {
-                $.fn.showStuData = function () {
-                    $('.stu-data').show();
-                    $('.emp-data').hide();
-                }
-                $.fn.showEmpData = function () {
-                    $('.emp-data').show();
-                    $('.stu-data').hide();
-                }
-                $.fn.setStuValueNull = function () {
-                    $('#fileuploads-fu_stu_academic_year, #fileuploads-fu_stu_course, #fileuploads-fu_stu_section').val('');
-                }
-                if ($('#fileuploads-fu_share_with').val() == 1) {
-                    $('.stu-data, .emp-data').hide();
-                    $.fn.setStuValueNull();
-                    $('#fileuploads-fu_emp_dept').val('');
-                }
-                if ($('#fileuploads-fu_share_with').val() == 1) {
-                    $('.stu-data, .emp-data').hide();
-                    $.fn.setStuValueNull();
-                    $('#fileuploads-fu_emp_dept').val('');
-                }
-                else if (($('#fileuploads-fu_share_with').val() == 2) || ($('#fileuploads-fu_share_with').val() == 4)) {
-                    $.fn.showStuData();
-                    $('#fileuploads-fu_emp_dept').val('');
-                }
-                else if ($('#fileuploads-fu_share_with').val() == 3) {
-                    $.fn.showEmpData();
-                    $.fn.setStuValueNull();
-                }
-            });
-            $('#fileuploads-fu_share_with').change(
-                function () {
-                    if ($('#fileuploads-fu_share_with').val() == 1) {
-                        $('.stu-data, .emp-data').hide();
-                        $.fn.setStuValueNull();
-                        $('#fileuploads-fu_emp_dept').val('');
-                    }
-                    else if (($('#fileuploads-fu_share_with').val() == 2) || ($('#fileuploads-fu_share_with').val() == 4)) {
-                        $.fn.showStuData();
-                        $('#fileuploads-fu_emp_dept').val('');
-                    }
-                    else if ($('#fileuploads-fu_share_with').val() == 3) {
-                        $.fn.showEmpData();
-                        $.fn.setStuValueNull();
-                    }
-                });
-            </script>
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">
                     <span aria-hidden="true">×</span><span class="sr-only"></span>
@@ -160,13 +110,13 @@
 
             <form id="file-upload-form" action="/document/file-uploads/create" method="post"
                   enctype="multipart/form-data">
-                <input type="hidden" name="_csrf" value="X2luSnF1T00sWS8NOTl4GwUOHw4UPAQuK1sCLgQGKgcSPwkkJDAFLg==">
+                <input type="hidden" name="_csrf" value="">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="form-group field-fileuploads-fu_title required">
-                                <label class="control-label" for="fileuploads-fu_title">Tiêu đề</label>
-                                <input type="text" id="fileuploads-fu_title" class="form-control"
+                            <div class="form-group ">
+                                <label class="control-label" for="">Tiêu đề</label>
+                                <input type="text" id="" class="form-control"
                                        name="FileUploads[fu_title]" maxlength="255" placeholder="Nhập tiêu đề cho file"
                                        aria-required="true">
 
@@ -176,8 +126,8 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="form-group field-fileuploads-fu_category_id required">
-                                <label class="control-label" for="fileuploads-fu_category_id">Loại file</label>
+                            <div class="form-group">
+                                <label class="control-label">Loại file</label>
                                 <select id="fileuploads-fu_category_id" class="form-control"
                                         name="FileUploads[fu_category_id]" aria-required="true">
                                     <option value="">--- Chọn loại file upload ---</option>

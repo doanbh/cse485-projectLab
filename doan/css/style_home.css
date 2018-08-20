@@ -26,6 +26,8 @@ a:hover{
 
 }
 
+
+
 .header_qlkh ul li:hover .box_dn{
 	display: block;
 }
@@ -196,10 +198,6 @@ ul.dropdown-menu li a img{
 
 footer{
 	border-top: 1px solid #d2d6de;
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   right: 0;
 }
 
 

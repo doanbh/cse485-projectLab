@@ -17,8 +17,22 @@
             <section class="login-form">
                 <form method="post" action="checkLogin.php" role="login">
                     <img src="images/logoWeb.png" class="img-responsive" alt=""/>
+                    <?php
+                    if (isset($_GET['f'])) {
+                        if ($_GET['f'] == 1) {
+                            ?>
+                            <p class="canh_bao">Thông tin đăng nhập không đúng</p>
+                            <?
+                        }
+                        if ($_GET['f'] == 2) {
+                            ?>
+                            <p class="canh_bao">Đăng kí thành công</p>
+                            <?
+                        }
+                    }
+                    ?>
                     <input type="email" name="txtEmail" placeholder="Email" required class="form-control input-lg"
-                           value="doanbh32@wru.vn"/>
+                           value="@wru.vn"/>
 
                     <input type="password" name="txtPassword" class="form-control input-lg" id="password"
                            placeholder="Password" required=""/>
