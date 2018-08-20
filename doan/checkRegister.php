@@ -11,7 +11,7 @@ if(isset($_POST['txtName']) && isset($_POST['txtNumPhone']) && isset($_POST['txt
     $phone = $_POST['txtNumPhone'];
     $email=$_POST['txtEmail'];
     $pass=$_POST['txtPassword'];
-    $newPass=md5($pass,PASSWORD_DEFAULT);
+    $newPass=md5($pass);
 
 
     if($email && $pass && $phone && $name){
@@ -25,7 +25,8 @@ if(isset($_POST['txtName']) && isset($_POST['txtNumPhone']) && isset($_POST['txt
         }else{
             $sqlAdd="INSERT INTO teacher(id,username,email,numphone,password) value(0,'$name','$email','$phone','$newPass')";
             $result2=$conn->query($sqlAdd);
-            printf("Affected rows (INSERT): %d\n", $conn->affected_rows);
+            header('location: login.php?f=2');
+            exit();
         }
 
         //4. Dong ket noi
